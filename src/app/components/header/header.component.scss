@@ -1,0 +1,38 @@
+@import "/src/assets/styles/mixins";
+
+.header-container {
+}
+
+.header {
+  @include make-container();
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__inner {
+    @include make-row();
+    justify-content: space-between;
+  }
+
+  &__brand {
+    @include make-col();
+    text-decoration: none;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  &-nav {
+    @include make-col();
+    display: flex;
+    gap: 0 20px;
+
+    &__link {
+      font-size: 15px;
+      color: var(--nav-link-color, #{rgba(#111827, 0.55)});
+      text-decoration: none;
+
+      &:hover {
+        --nav-link-color: #{rgba(#111827, 0.7)};
+      }
+    }
+  }
+}

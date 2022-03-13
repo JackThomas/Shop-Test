@@ -1,0 +1,14 @@
+<div class="product">
+  <div class="product__thumbnail">
+    <img src="{{ product.defaultImage }}" class="product__thumbnail-image" />
+  </div>
+  <div class="product__details">
+    <p class="product__title">{{ product.name }}</p>
+    <p class="product__price">{{ price }}</p>
+  </div>
+  <div class="product__actions">
+    <button class="product__actions-add" (click)="addToCart()">
+      Add to cart
+    </button>
+  </div>
+</div>

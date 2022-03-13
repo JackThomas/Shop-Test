@@ -1,0 +1,19 @@
+@import "/src/assets/styles/mixins";
+
+.layout {
+  @include make-container();
+  width: auto;
+  padding-bottom: 100px;
+
+  &__inner {
+    @include make-row();
+  }
+
+  &__main {
+    @include make-col($size: 70%);
+  }
+
+  &__sidebar {
+    @include make-col($size: 30%);
+  }
+}

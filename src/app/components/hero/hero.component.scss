@@ -1,0 +1,30 @@
+@import "/src/assets/styles/mixins";
+
+.hero {
+  @include make-container();
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 6px;
+  background-color: #afb4c6;
+
+  aspect-ratio: 3;
+
+  &__inner {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    @include make-col();
+  }
+
+  &__title {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+}

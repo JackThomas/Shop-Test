@@ -1,0 +1,18 @@
+<div class="cart-item" *ngIf="product">
+  <div class="cart-item__thumbnail">
+    <img src="{{ product.defaultImage }}" class="cart-item__thumbnail-image" />
+  </div>
+  <div class="cart-item__details-group">
+    <div class="cart-item__details">
+      <p class="cart-item__title">{{ product.name }}</p>
+      <p class="cart-item__price">{{ price }}</p>
+    </div>
+    <div class="cart-item__details">
+      <p class="cart-item__quantity">Qty: {{ quantity }}</p>
+
+      <button class="cart-item__action" (click)="removeFromCart()">
+        Remove
+      </button>
+    </div>
+  </div>
+</div>

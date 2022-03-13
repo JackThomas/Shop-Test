@@ -1,0 +1,25 @@
+<div class="cart">
+  <div class="cart__inner" *ngIf="initialised && items && items.length > 0">
+    <div class="cart__header">
+      <p class="cart__title">Cart</p>
+      <p class="cart__count">
+        {{ totalQuantity }} Item{{ totalQuantity > 1 ? "s" : "" }}
+      </p>
+    </div>
+
+    <div class="cart__list">
+      <app-cart-item
+        *ngFor="let item of items"
+        [itemId]="item.id"
+        [quantity]="item.quantity"
+      ></app-cart-item>
+    </div>
+    <div class="cart__actions">
+      <button class="cart__actions-button" [disabled]>Proceed</button>
+    </div>
+  </div>
+  <div class="cart__notice" *ngIf="initialised && items && items.length === 0">
+    <p class="cart__title">Cart Empty</p>
+  </div>
+  <div class="cart__loader" *ngIf="!initialised"></div>
+</div>

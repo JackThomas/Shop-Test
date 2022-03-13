@@ -1,0 +1,16 @@
+<div class="header-container">
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__brand" routerLink="/">Smart Hardware Shop</a>
+
+      <nav class="header-nav" *ngIf="navigation">
+        <a
+          [routerLink]="item.path"
+          class="header-nav__link"
+          *ngFor="let item of navigation"
+          >{{ item.title }}</a
+        >
+      </nav>
+    </div>
+  </header>
+</div>

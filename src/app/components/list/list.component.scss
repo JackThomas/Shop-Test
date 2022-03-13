@@ -1,0 +1,15 @@
+@import "/src/assets/styles/mixins";
+
+.list {
+  display: flex;
+  flex-direction: column;
+
+  &__search {
+  }
+
+  &__items {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
